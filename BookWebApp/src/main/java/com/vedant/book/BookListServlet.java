@@ -25,7 +25,7 @@ protected void doGet(HttpServletRequest req, HttpServletResponse res) throws Ser
 		
 		e.printStackTrace();
 	}
-	try(Connection con = DriverManager.getConnection("jdbc:mysql:///book","root","ihit@1212n");
+	try(Connection con = DriverManager.getConnection("jdbc:mysql:///book","root","");
 				PreparedStatement ps = con.prepareStatement(query);){
 			ResultSet rs = ps.executeQuery();
 			pw.println("<table border='1' align='center'>");
