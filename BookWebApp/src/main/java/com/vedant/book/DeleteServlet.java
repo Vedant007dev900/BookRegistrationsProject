@@ -27,7 +27,7 @@ public class DeleteServlet extends HttpServlet {
 			
 			e.printStackTrace();
 		}
-		try(Connection con = DriverManager.getConnection("jdbc:mysql:///book","root","ihit@1212n");
+		try(Connection con = DriverManager.getConnection("jdbc:mysql:///book","root","");
 					PreparedStatement ps = con.prepareStatement(query);){
 				ps.setInt(1, id);
 				int count = ps.executeUpdate();
