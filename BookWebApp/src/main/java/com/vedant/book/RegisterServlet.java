@@ -29,7 +29,7 @@ protected void doGet(HttpServletRequest req, HttpServletResponse res) throws Ser
 		
 		e.printStackTrace();
 	}
-	try(Connection con = DriverManager.getConnection("jdbc:mysql:///book","root","ihit@1212n");
+	try(Connection con = DriverManager.getConnection("jdbc:mysql:///book","root","");
 				PreparedStatement ps = con.prepareStatement(query);){
 					ps.setString(1,  bookName);
 					ps.setString(2,  bookEdition);
